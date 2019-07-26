@@ -48,24 +48,24 @@ Please scroll down for English readme.
 
 ```javascript
 module.exports = {
-    module: {
-        rules: [{
-        test: /\.css$/,
-        use: [
-            'style-loader',
-            'rpx-loader', // 将`rpx-loader`插入到`css-loader`之前
-            'css-loader'
-        ]
-        }, {
-        test: /\.scss$/, // 也可以用于预处理器
-        use: [
-            'vue-style-loader', // 可以与其它loader连环
-            'rpx-loader', // 将`rpx-loader`插入到`css-loader`之前
-            'css-loader',
-            'sass-loader'
-        ]
-      }]
-    }
+  module: {
+    rules: [{
+    test: /\.css$/,
+    use: [
+      'style-loader',
+      'rpx-loader', // 将`rpx-loader`插入到`css-loader`之前
+      'css-loader'
+    ]
+    }, {
+    test: /\.scss$/, // 也可以用于预处理器
+    use: [
+      'vue-style-loader', // 可以与其它loader连环
+      'rpx-loader', // 将`rpx-loader`插入到`css-loader`之前
+      'css-loader',
+      'sass-loader'
+    ]
+    }]
+  }
 }
 ```
 
@@ -128,24 +128,24 @@ In `webpack.config.js`, you need to insert `rpx-loader` before `css-loader`
 
 ```javascript
 module.exports = {
-    module: {
-        rules: [{
-        test: /\.css$/,
-        use: [
-            'style-loader',
-            'rpx-loader', // insert 'rpx-loader' before 'css-loader'
-            'css-loader'
-        ]
-        }, {
-        test: /\.scss$/, // also works in preprocessors
-        use: [
-            'vue-style-loader', // can be chained with other loaders
-            'rpx-loader', // insert 'rpx-loader' before 'css-loader'
-            'css-loader',
-            'sass-loader'
-        ]
-        }]
-    }
+  module: {
+    rules: [{
+    test: /\.css$/,
+    use: [
+      'style-loader',
+      'rpx-loader', // insert 'rpx-loader' before 'css-loader'
+      'css-loader'
+    ]
+    }, {
+    test: /\.scss$/, // also works in preprocessors
+    use: [
+      'vue-style-loader', // can be chained with other loaders
+      'rpx-loader', // insert 'rpx-loader' before 'css-loader'
+      'css-loader',
+      'sass-loader'
+    ]
+    }]
+  }
 }
 ```
 
